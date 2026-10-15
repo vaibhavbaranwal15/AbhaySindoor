@@ -17,13 +17,6 @@ export default function Products() {
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        <p className="image-help">
-          {t.products.imageHelp.prefix}
-          <b>{t.products.imageHelp.bold}</b>
-          {t.products.imageHelp.middle}
-          <code>{t.products.imageHelp.code}</code>
-          {t.products.imageHelp.suffix}
-        </p>
       </div>
     </section>
   );

@@ -1,28 +1,14 @@
-import { useState } from 'react';
 import { useSettings } from '../context/SettingsContext';
 import { SITE_DATA, LOCATION_QUERY, googleMapsLink, whatsappLink } from '../data/site';
 
 export default function GetInTouch() {
-  const [isOpen, setIsOpen] = useState(false);
   const { t } = useSettings();
 
   return (
     <div className="footer-get-in-touch">
-      <button
-        type="button"
-        className="footer-toggle-btn"
-        aria-expanded={isOpen}
-        aria-controls="footerGetInTouchPanel"
-        onClick={() => setIsOpen((prev) => !prev)}
-      >
-        <span>{t.footer.getInTouch}</span>
-        <span className={`toggle-arrow ${isOpen ? 'open' : ''}`}>▾</span>
-      </button>
+      <h4>{t.footer.getInTouch}</h4>
 
-      <div
-        id="footerGetInTouchPanel"
-        className={`get-in-touch-panel ${isOpen ? 'open' : ''}`}
-      >
+      <div className="get-in-touch-panel">
         <a
           className="contact-option"
           href={whatsappLink()}
@@ -66,3 +52,4 @@ export default function GetInTouch() {
     </div>
   );
 }
+

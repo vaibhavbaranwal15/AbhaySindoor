@@ -54,13 +54,7 @@ export const translations = {
       heading: 'Our Products',
       description: 'Choose your preferred size and order directly with us.',
       perPack: '/ pack',
-      imageHelp: {
-        prefix: 'Want to use your actual product photos? Select ',
-        bold: 'Change image',
-        middle: " on a product card to preview your image. To publish it for everyone, replace that product's image file in the ",
-        code: 'images',
-        suffix: ' folder.',
-      },
+      priceNote: 'Price excludes delivery charges.',
       list: [
         {
           id: '15gm',
@@ -182,13 +176,7 @@ export const translations = {
       heading: 'हमारे उत्पाद',
       description: 'अपनी पसंद का आकार चुनें और सीधे हमसे ऑर्डर करें।',
       perPack: '/ पैक',
-      imageHelp: {
-        prefix: 'क्या आप अपने वास्तविक उत्पाद फ़ोटो का उपयोग करना चाहते हैं? अपनी छवि देखने के लिए उत्पाद कार्ड पर ',
-        bold: 'Change image',
-        middle: ' चुनें। इसे सभी के लिए प्रकाशित करने हेतु, ',
-        code: 'images',
-        suffix: ' फ़ोल्डर में उस उत्पाद की छवि फ़ाइल बदलें।',
-      },
+      priceNote: 'मूल्य में डिलीवरी शुल्क शामिल नहीं है।',
       list: [
         {
           id: '15gm',
