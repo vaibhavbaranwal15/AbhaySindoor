@@ -408,6 +408,16 @@ html[lang="hi"] .hero-points {
 [data-theme="dark"] .product-image {
   background: radial-gradient(circle at 50% 45%, #3c1a22 0, #221519 70%, #1a1013 100%);
   border-color: #52242d;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .product-image:hover {
+  border-color: #8c3846;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .product-image img {
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.5));
 }
 
 [data-theme="dark"] .image-tag {
