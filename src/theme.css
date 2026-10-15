@@ -1,0 +1,599 @@
+/* ==========================================================================
+   THEME STYLES (Bright Mode Controls, Hindi Typography & Dark Mode Overrides)
+   ========================================================================== */
+
+/* --- Circular Mask for Logo --- */
+.brand-logo {
+  border-radius: 50%;
+  clip-path: circle(50%);
+  overflow: hidden;
+}
+
+.hero-product-image,
+.about-image {
+  border-radius: 50%;
+  clip-path: circle(50%);
+}
+
+/* --- Toggles & Header Controls --- */
+.toggles-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: #f0e2da;
+  border-radius: 20px;
+  padding: 2px;
+  border: 1px solid #d4b5a6;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  padding: 5px 9px;
+  border-radius: 14px;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--muted);
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
+.lang-btn.active {
+  background: var(--red);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(127, 4, 30, 0.28);
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #d4b5a6;
+  background: #f7eee5;
+  color: var(--red);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: #ffffff;
+  border-color: var(--red);
+}
+
+.desktop-only {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+  }
+  .mobile-menu-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    margin-top: 10px;
+    border-top: 1px solid #ebd8ce;
+  }
+}
+
+/* --- Hindi Devanagari Typography & Matra Clipping Prevention --- */
+html[lang="hi"] {
+  font-family: 'Noto Sans Devanagari', Inter, Arial, sans-serif;
+}
+
+html[lang="hi"] .brand-text,
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="hi"] h4,
+html[lang="hi"] .price,
+html[lang="hi"] .about-seal {
+  font-family: 'Noto Serif Devanagari', "Playfair Display", Georgia, serif;
+  letter-spacing: normal !important;
+  line-height: 1.35;
+}
+
+html[lang="hi"] .hero h1 {
+  letter-spacing: 0 !important;
+  line-height: 1.25;
+  padding-bottom: 4px;
+}
+
+html[lang="hi"] .hero h2,
+html[lang="hi"] .section-heading h2,
+html[lang="hi"] .about-copy h2,
+html[lang="hi"] .contact-intro h2 {
+  line-height: 1.35;
+  padding-bottom: 2px;
+}
+
+html[lang="hi"] .eyebrow,
+html[lang="hi"] .product-kicker,
+html[lang="hi"] .featured-label,
+html[lang="hi"] .image-tag,
+html[lang="hi"] .brand-text small,
+html[lang="hi"] .contact-option small,
+html[lang="hi"] .hero-points {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+/* --- Restructured Footer Columns & Get in Touch --- */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1.3fr;
+  gap: 36px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ebd8ce;
+}
+
+.footer-column h4 {
+  margin: 0 0 14px;
+  font: 700 16px "Playfair Display", Georgia, serif;
+  color: var(--red-dark);
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link-list a {
+  color: #0c4d03;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-link-list a:hover {
+  color: var(--red);
+}
+
+.footer-get-in-touch {
+  width: 100%;
+}
+
+.footer-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d4b5a6;
+  border-radius: 8px;
+  background: #fffaf5;
+  color: var(--red-dark);
+  font: 700 13px Inter, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.footer-toggle-btn:hover {
+  background: #ffffff;
+  border-color: var(--red);
+}
+
+.toggle-arrow {
+  display: inline-block;
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+.toggle-arrow.open {
+  transform: rotate(180deg);
+}
+
+.get-in-touch-panel {
+  display: none;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.get-in-touch-panel.open {
+  display: flex;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+}
+
+.footer-bottom > p {
+  color: var(--muted);
+  font-size: 10px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom > p {
+    order: 3;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES ([data-theme="dark"])
+   ========================================================================== */
+[data-theme="dark"] {
+  --red: #e63956;
+  --red-dark: #f87171;
+  --red-light: #fca5a5;
+  --gold: #e2b368;
+  --cream: #1f1719;
+  --cream-dark: #2a1f22;
+  --ink: #f3f4f6;
+  --muted: #c9b4b7;
+  --border: #4d232a;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] body {
+  background: #120d0f;
+  color: #f3f4f6;
+}
+
+/* Header */
+[data-theme="dark"] .site-header {
+  background: rgba(24, 17, 19, 0.94);
+  border-bottom: 1px solid rgba(180, 50, 70, 0.35);
+}
+
+[data-theme="dark"] .brand-text {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .brand-text small {
+  color: #d1b8b8;
+}
+
+[data-theme="dark"] .nav-links a {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .nav-links a:hover {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .menu-toggle {
+  background: #23171b;
+  border-color: #5a282f;
+  color: #fca5a5;
+}
+
+@media (max-width: 700px) {
+  [data-theme="dark"] .nav-links {
+    background: #1e1518;
+    border-bottom-color: #4a1e24;
+  }
+  [data-theme="dark"] .nav-links a {
+    border-bottom-color: #2d1d22;
+  }
+  [data-theme="dark"] .mobile-menu-controls {
+    border-top-color: #381f25;
+  }
+}
+
+/* Toggles Dark Mode */
+[data-theme="dark"] .lang-switch {
+  background: #2a1b1f;
+  border-color: #4a242c;
+}
+
+[data-theme="dark"] .lang-btn {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .lang-btn.active {
+  background: #e63956;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background: #2a1b1f;
+  border-color: #4a242c;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background: #372026;
+  border-color: #e63956;
+}
+
+/* Hero */
+[data-theme="dark"] .hero {
+  background: radial-gradient(ellipse at 80% 20%, #4a0d18 0, transparent 48%),
+              linear-gradient(125deg, #241317 0%, #171012 55%, #141b12 100%);
+}
+
+[data-theme="dark"] .eyebrow {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .hero h1 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .hero h1 span {
+  color: #f87171;
+}
+
+[data-theme="dark"] .hero h2 {
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .hero-description {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .hero-points {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .hero-image-frame {
+  border-color: #5a222a;
+  background: linear-gradient(145deg, #2f181c, #1a1113 65%, #25171a);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .hero-decoration {
+  border-color: #5a222a;
+}
+
+[data-theme="dark"] .text-link {
+  color: #fca5a5;
+}
+
+/* Trust Strip */
+[data-theme="dark"] .trust-strip {
+  background: #261619;
+  border-bottom: 1px solid #4a1f26;
+}
+
+[data-theme="dark"] .trust-grid > div {
+  border-right-color: #4a1f26;
+}
+
+[data-theme="dark"] .trust-icon {
+  background: #381f25;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .trust-grid b {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .trust-grid small {
+  color: #c9b4b7;
+}
+
+@media (max-width: 700px) {
+  [data-theme="dark"] .trust-grid > div {
+    border-bottom-color: #4a1f26;
+  }
+}
+
+/* Products Section */
+[data-theme="dark"] .products-section {
+  background: #171013;
+}
+
+[data-theme="dark"] .section-heading h2 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .section-heading > p:last-child {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .product-card {
+  background: #21171b;
+  border-color: #492229;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .featured-card {
+  border-color: #9e7540;
+}
+
+[data-theme="dark"] .featured-label {
+  background: #c22949;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .product-image {
+  background: radial-gradient(circle at 50% 45%, #3c1a22 0, #221519 70%, #1a1013 100%);
+  border-color: #52242d;
+}
+
+[data-theme="dark"] .image-tag {
+  background: #3a2211;
+  border-color: #684124;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .product-kicker {
+  color: #f87171;
+}
+
+[data-theme="dark"] .product-info h3 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .product-description {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .price {
+  color: #f87171;
+}
+
+[data-theme="dark"] .price small {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .size-pill {
+  background: #321c21;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .image-help {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .image-help code {
+  background: #28171b;
+  color: #f87171;
+}
+
+/* About Section */
+[data-theme="dark"] .about-section {
+  background: #1b1316;
+}
+
+[data-theme="dark"] .about-art {
+  background: linear-gradient(145deg, #29171b, #191013);
+  border-color: #482128;
+}
+
+[data-theme="dark"] .about-seal {
+  background: #27161a;
+  border-color: var(--gold);
+  color: #f87171;
+}
+
+[data-theme="dark"] .about-copy h2 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .about-copy h2 span {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .about-copy > p:not(.eyebrow) {
+  color: #c9b4b7;
+}
+
+/* Contact Section */
+[data-theme="dark"] .contact-section {
+  background: #140e10;
+}
+
+[data-theme="dark"] .contact-panel {
+  background: #1f1519;
+  border: 1px solid #3c1e24;
+}
+
+[data-theme="dark"] .contact-intro h2 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .contact-intro > p:last-child {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .contact-option {
+  background: #26191d;
+  border-color: #422026;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .contact-option:hover {
+  border-color: #8c3846;
+}
+
+[data-theme="dark"] .contact-icon {
+  background: #361c22;
+  color: #f87171;
+}
+
+[data-theme="dark"] .contact-option b {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .contact-option small {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .option-arrow {
+  color: #f87171;
+}
+
+/* Footer Dark Mode */
+[data-theme="dark"] .site-footer {
+  background: #110c0e;
+  border-top-color: #381920;
+}
+
+[data-theme="dark"] .footer-columns {
+  border-bottom-color: #381920;
+}
+
+[data-theme="dark"] .footer-column h4 {
+  color: #f87171;
+}
+
+[data-theme="dark"] .footer-link-list a {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .footer-link-list a:hover {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .footer-toggle-btn {
+  background: #211519;
+  border-color: #432128;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .footer-toggle-btn:hover {
+  border-color: #8c3846;
+}
+
+[data-theme="dark"] .footer-bottom > p {
+  color: #c9b4b7;
+}
+
+[data-theme="dark"] .back-top {
+  color: #f87171;
+}
