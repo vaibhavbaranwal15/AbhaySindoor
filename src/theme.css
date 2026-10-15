@@ -181,45 +181,10 @@ html[lang="hi"] .hero-points {
   width: 100%;
 }
 
-.footer-toggle-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #d4b5a6;
-  border-radius: 8px;
-  background: #fffaf5;
-  color: var(--red-dark);
-  font: 700 13px Inter, sans-serif;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.footer-toggle-btn:hover {
-  background: #ffffff;
-  border-color: var(--red);
-}
-
-.toggle-arrow {
-  display: inline-block;
-  font-size: 14px;
-  transition: transform 0.25s ease;
-}
-
-.toggle-arrow.open {
-  transform: rotate(180deg);
-}
-
 .get-in-touch-panel {
-  display: none;
-  margin-top: 10px;
+  display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.get-in-touch-panel.open {
-  display: flex;
 }
 
 .footer-bottom {
@@ -476,13 +441,8 @@ html[lang="hi"] .hero-points {
   color: #fca5a5;
 }
 
-[data-theme="dark"] .image-help {
+[data-theme="dark"] .price-note {
   color: #9ca3af;
-}
-
-[data-theme="dark"] .image-help code {
-  background: #28171b;
-  color: #f87171;
 }
 
 /* About Section */
@@ -580,15 +540,6 @@ html[lang="hi"] .hero-points {
   color: #fca5a5;
 }
 
-[data-theme="dark"] .footer-toggle-btn {
-  background: #211519;
-  border-color: #432128;
-  color: #f9fafb;
-}
-
-[data-theme="dark"] .footer-toggle-btn:hover {
-  border-color: #8c3846;
-}
 
 [data-theme="dark"] .footer-bottom > p {
   color: #c9b4b7;

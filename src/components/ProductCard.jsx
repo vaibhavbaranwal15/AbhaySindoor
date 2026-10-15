@@ -26,6 +26,7 @@ export default function ProductCard({ product }) {
           </div>
           <span className="size-pill">{product.sizePill}</span>
         </div>
+        <p className="price-note">{t.products.priceNote}</p>
         <a
           className="button button-full"
           href={whatsappLink(product.orderMessage)}
